@@ -1,8 +1,8 @@
 name: passwordwidget
-description: A new Flutter package project.
-version: 0.0.1
-author:
-homepage:
+description: A flutter widget to help displayng rules and password field in a form.
+version: 0.1.2
+author: brakzog <brakzog@gmail.com>
+homepage: https://github.com/brakzog/password_widget
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
