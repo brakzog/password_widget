@@ -1,6 +1,6 @@
 name: passwordwidget
-description: A flutter widget to help displayng rules and password field in a form.
-version: 0.1.2
+description: A flutter widget to help displaying rules and password field in a form.
+version: 0.1.3
 author: brakzog <brakzog@gmail.com>
 homepage: https://github.com/brakzog/password_widget
 

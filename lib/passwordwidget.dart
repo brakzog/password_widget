@@ -37,7 +37,8 @@ class PasswordWidget extends StatefulWidget {
 
 class PasswordState extends State<PasswordWidget> {
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _checkPasswordController = TextEditingController();
+  final TextEditingController _checkPasswordController =
+      TextEditingController();
   List<Text> ruleText = <Text>[];
 
   @override
@@ -96,11 +97,13 @@ class PasswordState extends State<PasswordWidget> {
                     borderRadius: BorderRadius.circular(_radius),
                     borderSide: const BorderSide(color: Colors.transparent),
                   ),
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 26.0, vertical: 14),
+                  contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 26.0, vertical: 14),
                   filled: true,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(_radius),
-                    borderSide: const BorderSide(color: Colors.black, width: 1.0),
+                    borderSide:
+                        const BorderSide(color: Colors.black, width: 1.0),
                   ),
                   hintText: widget.passwordHintText,
                   fillColor: Colors.white),
@@ -150,11 +153,13 @@ class PasswordState extends State<PasswordWidget> {
                     borderRadius: BorderRadius.circular(_radius),
                     borderSide: const BorderSide(color: Colors.transparent),
                   ),
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 26, vertical: 14),
+                  contentPadding:
+                      const EdgeInsets.symmetric(horizontal: 26, vertical: 14),
                   filled: true,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(_radius),
-                    borderSide: const BorderSide(color: Colors.black, width: 1.0),
+                    borderSide:
+                        const BorderSide(color: Colors.black, width: 1.0),
                   ),
                   hintText: widget.passwordConfirmHintText,
                   fillColor: Colors.white),
@@ -199,7 +204,9 @@ class PasswordState extends State<PasswordWidget> {
     final RegExp regExp = RegExp(rule);
     if (rule.isEmpty) {
       // Custom rule that needs to be managed here (the equalty of bth field)
-      return _passwordController.text == _checkPasswordController.text ? Colors.green : Colors.red;
+      return _passwordController.text == _checkPasswordController.text
+          ? Colors.green
+          : Colors.red;
     } else if (regExp.hasMatch(_passwordController.text)) {
       return Colors.green;
     } else {
@@ -215,7 +222,9 @@ class PasswordState extends State<PasswordWidget> {
         borderColor = Colors.red;
       }
     }
-    borderColor = (_passwordController.text == _checkPasswordController.text) ? borderColor : Colors.red;
+    borderColor = (_passwordController.text == _checkPasswordController.text)
+        ? borderColor
+        : Colors.red;
     return borderColor;
   }
 
@@ -227,6 +236,7 @@ class PasswordState extends State<PasswordWidget> {
         hasInvalidRule = true;
       }
     }
-    return hasInvalidRule && (_passwordController.text != _checkPasswordController.text);
+    return hasInvalidRule &&
+        (_passwordController.text != _checkPasswordController.text);
   }
 }
